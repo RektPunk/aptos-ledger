@@ -1,6 +1,7 @@
-from enum import Enum
+from models.meta.endpoint import Endpoint
 
 
-class AccountEndpoint(Enum):
-    ACCOUNT_RESOURCES: str = "https://fullnode.mainnet.aptoslabs.com/v1/accounts/{address}/resources"
-
+class AccountEndpoint(Endpoint):
+    ACCOUNT_RESOURCES: str = (
+        "https://fullnode.mainnet.aptoslabs.com/v1/accounts/{address}/resources"
+    )

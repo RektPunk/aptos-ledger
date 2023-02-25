@@ -1,2 +1,7 @@
 pydantic
-streamlit
+pandas==1.5.2
+networkx==3.0
+plotly==5.12.0
+streamlit==1.17.0 
+streamlit-tags==1.2.8
+streamlit-aggrid==0.3.3
