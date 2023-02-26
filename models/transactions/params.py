@@ -1,4 +1,4 @@
-from models.meta.params import Params
+from models.metadata.params import Params
 
 
 class AccountTransactionsParams(Params):

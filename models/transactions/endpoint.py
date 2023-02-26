@@ -1,4 +1,4 @@
-from models.meta.endpoint import Endpoint
+from models.metadata.endpoint import Endpoint
 
 
 class TransactionsEndpoint(Endpoint):
