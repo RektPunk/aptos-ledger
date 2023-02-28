@@ -6,7 +6,7 @@ from models.metadata.params import Params
 from utils.variables import HEADERS
 
 
-def validate_addresses(addresses: Union[List[str], str])-> List[str]:
+def validate_addresses(addresses: Union[List[str], str]) -> List[str]:
     if isinstance(addresses, str):
         addresses = [addresses]
     return addresses

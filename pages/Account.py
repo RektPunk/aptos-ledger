@@ -23,16 +23,8 @@ st.sidebar.write(st.session_state.addresses)
 account_resources_tab, transactions_tab = st.tabs(["account resources", "transactions"])
 
 with account_resources_tab:
-    st.json(
-        get_account_resources(
-            st.session_state.addresses
-        )
-    )
+    st.json(get_account_resources(st.session_state.addresses))
 
 
 with transactions_tab:
-    st.json(
-        get_account_transactions(
-            st.session_state.addresses
-        )
-    )
+    st.json(get_account_transactions(st.session_state.addresses))

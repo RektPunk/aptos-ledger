@@ -11,13 +11,10 @@ def get_account_resources(
     responses = {}
     for address in addresses:
         _params = AccountResourcesParams(
-            address = address,
+            address=address,
         )
         _response = get_response(
-            url=AccountEndpoint.ACCOUNT_RESOURCES.value,
-            params=_params
+            url=AccountEndpoint.ACCOUNT_RESOURCES.value, params=_params
         )
-        responses.update({
-            address: _response
-        })
+        responses.update({address: _response})
     return responses
