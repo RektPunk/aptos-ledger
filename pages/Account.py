@@ -4,12 +4,8 @@ from streamlit_tags import st_tags_sidebar
 from logic.account_resources import get_account_resources
 from logic.transactions import get_account_transactions
 
-st.set_page_config(
-    page_title="Aptos ledger",
-    layout="wide",
-)
 
-st.write("# Aptos ledger")
+st.write("# Account")
 
 
 st.session_state.addresses = st_tags_sidebar(
@@ -27,16 +23,8 @@ st.sidebar.write(st.session_state.addresses)
 account_resources_tab, transactions_tab = st.tabs(["account resources", "transactions"])
 
 with account_resources_tab:
-    st.json(
-        get_account_resources(
-            st.session_state.addresses
-        )
-    )
+    st.json(get_account_resources(st.session_state.addresses))
 
 
 with transactions_tab:
-    st.json(
-        get_account_transactions(
-            st.session_state.addresses
-        )
-    )
+    st.json(get_account_transactions(st.session_state.addresses))
